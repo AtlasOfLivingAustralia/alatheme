@@ -1,0 +1,26 @@
+Package: alatheme
+Version: 0.1
+Date: 2021-02-24
+Title: ALA theme for plots, slides and web apps
+Authors@R: c(person(c("Martin", "J."), "Westgate", role=c("aut", "cre"),
+  email="martinjwestgate@gmail.com"),
+  person("Matilda", "Stevenson", email = "matilda.stevenson@csiro.au",
+                  role = c("aut")))
+Description: R package storing ALA themes for plots (ggplot2), slides (xaringan) and web apps (shiny/bslib).
+Depends: R (>= 4.0.0)
+Imports:
+    ggplot2,
+    ggtext,
+    grid,
+    magick,
+    xaringan
+Suggests:
+   dplyr,
+   galah,
+   lubridate
+License: GPL-3
+URL: https://ala.org.au
+BugReports: https://github.com/AtlasOfLivingAustralia/alatheme/issues
+LazyData: true
+RoxygenNote: 7.1.1
+Encoding: UTF-8
