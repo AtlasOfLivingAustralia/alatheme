@@ -1,0 +1,66 @@
+---
+title: "Title"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    highlight: default
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    # code_folding: hide
+    include:
+      in_header: template-files/header.html
+      after_body: template-files/footer.html
+    css: template-files/style.css
+    self_contained: FALSE
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+library(htmltools)
+source("template-files/functions.R")
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+
+
+<!-- Picture & Github link in upper right corner -->
+
+```{r upper right bio, echo = FALSE, eval = TRUE}
+# Note: To turn off, change to `eval = FALSE` in chunk heading
+
+add_author_profile_photo(
+  img_src = "picture.png", # add your photo
+  github_url = "https://github.com/AtlasOfLivingAustralia/alatemplates" # add your github account url
+)
+```
+
+
+
+------------------------------------------------------------------------------
+
+Provide brief introduction about what your code does and why you decided to write this code (e.g., a specific holiday, to solve a common problem, etc)
+
+------------------------------------------------------------------------------
+
+# Section 1
+
+## Subsection
+
+Example chunk
+
+```{r, warning = FALSE, message = FALSE}
+library(kableExtra)
+library(tidyverse)
+
+# a table
+head(mtcars, n=5) %>%
+  kbl() %>%
+  kable_styling()
+```
+
+<br>
+
+------------------------------------------------------------------------------

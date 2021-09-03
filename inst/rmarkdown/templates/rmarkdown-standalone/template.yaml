@@ -1,0 +1,4 @@
+name: rmarkdown-standalone
+description: >
+   ALA R markdown template for stand-alone articles
+create_dir: false

@@ -1,0 +1,5 @@
+name: rmarkdown-website-post
+description: >
+   For a document intended as a Post on the ALA Labs website.
+   Uses a template Distill heading to work correctly with ALA Labs website settings
+create_dir: FALSE

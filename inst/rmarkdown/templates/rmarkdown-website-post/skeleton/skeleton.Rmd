@@ -1,0 +1,91 @@
+---
+title: your-title
+description: |
+  a brief background/description of the article
+author:
+  - name: Firstname Lastname
+date: 'YYYY-MM-DD'
+categories: 
+  - add categories (these should match main categories used on website, For example:)
+  - Maps
+  - Mammalia
+  - Chordata
+output: 
+  distill::distill_article:
+    highlight: tango
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+<!-- Complete title, description, author and date for website metadata -->
+
+```{r, include=FALSE}
+# Load htmltools and add date function
+library(htmltools)
+date.func <- format(Sys.time(), '%d %B, %Y')
+```
+
+<!-- remove distill metadata section -->
+```{css, echo = FALSE}
+d-byline {
+    display: none;
+  }
+```
+
+
+<!------------------------ Author card ------------------------------>
+
+:::author-card
+:::float-image
+
+<!-- Author image -->
+```{r out.width='120px', out.extra='style="float:right; margin-left:15px; margin-right:50px; clip-path: circle();"', echo=FALSE}
+# EDIT image. Amend final part of url to correct author image
+knitr::include_graphics("https://raw.githubusercontent.com/AtlasOfLivingAustralia/SDS_website/main/images/people/firstname.jpg")
+```
+
+:::author-card-text
+<!-- Author name -->
+<h4 style = "margin-bottom:5px">Author:</h4>
+[author-name](people/Lastname_Firstname/index.html) <!-- EDIT author info-->
+
+<!-- Date -->
+<h4 style = "margin-bottom:5px">Date:</h4>
+DD Month, YEAR <!-- EDIT date. Note: Add `r date.func` (including ``) to use today's date-->
+
+:::
+
+:::
+:::
+
+<br>
+
+Introductory text goes here. This section can provide initial context about why the output or analysis was made and why it might be useful for others.
+
+# Section 1
+
+```{r}
+# Code
+```
+
+
+## Subsection
+
+Example chunk
+
+```{r, warning = FALSE, message = FALSE}
+library(kableExtra)
+library(tidyverse)
+
+# a table
+head(mtcars, n=5) %>%
+  kbl() %>%
+  kable_styling()
+```
+
+<br>
+
+
+<!-- If there is an original R script in the science/comms repo folder, add link at the end of the article -->
+See the [original R script](https://github.com/AtlasOfLivingAustralia/science/blob/main/comms/subfolder/your-code.R)
